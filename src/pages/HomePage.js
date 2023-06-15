@@ -1,88 +1,55 @@
 import React from 'react'
+import { useNavigate } from 'react-router';
 
 const HomePage = () => {
-  // const amount = 900;
-  // const personName = 'hello world';
+  const meal = {
+    "idMeal": "52771",
+    "strMeal": "Spicy Arrabiata Penne",
+    "strCategory": "Vegetarian",
+    "strArea": "Italian",
+    "strInstructions": "Bring a large pot of water to a boil. Add kosher salt to the boiling water, then add the pasta. Cook according to the package instructions, about 9 minutes.\r\nIn a large skillet over medium-high heat, add the olive oil and heat until the oil starts to shimmer. Add the garlic and cook, stirring, until fragrant, 1 to 2 minutes. Add the chopped tomatoes, red chile flakes, Italian seasoning and salt and pepper to taste. Bring to a boil and cook for 5 minutes. Remove from the heat and add the chopped basil.\r\nDrain the pasta and add it to the sauce. Garnish with Parmigiano-Reggiano flakes and more basil and serve warm.",
+    "strMealThumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg",
+    "strTags": "Pasta,Curry",
+    "strYoutube": "https://www.youtube.com/watch?v=1IszT_guI08",
+    "strIngredient1": "penne rigate",
+    "strIngredient2": "olive oil",
+    "strIngredient3": "garlic",
+    "strIngredient4": "chopped tomatoes",
+    "strIngredient5": "red chile flakes",
+    "strIngredient6": "italian seasoning",
+    "strIngredient7": "basil",
+    "strIngredient8": "Parmigiano-Reggiano",
+    "strMeasure1": "1 pound",
+    "strMeasure2": "1/4 cup",
+    "strMeasure3": "3 cloves",
+    "strMeasure4": "1 tin ",
+    "strMeasure5": "1/2 teaspoon",
+    "strMeasure6": "1/2 teaspoon",
+    "strMeasure7": "6 leaves",
+    "strMeasure8": "spinkling",
+  };
 
-  // const a = 90;
-  // const b = 100;
 
-  // // console.log(a < b);
-  // // console.log(a > b);
-  // // console.log(a <= b);
-  // // console.log(a >= b);
-  // // console.log(a === b);
-  // // console.log(a !== b);
-
-  // console.log(a > b || a < b || a === b);
-  // console.log(a > b && a < b && a === b);
-
+  const nav = useNavigate();
   return (
     <div>
-      <div className='bg-black'>
-        {/* <h1 className='text-[20px]  text-purple-700 font-bold underline decoration-wavy tracking-wide bg-slate-300'>{`${amount} ${personName.toLocaleUpperCase()}`}</h1> */}
-
-
-        <div className="info grid justify-center items-center ml-[400px]">
-          <img className='h-300% w-500% rounded-sm' src="https://images.squarespace-cdn.com/content/v1/5a78ab8490badee028bef0e9/1568935524292-TPSLMXHD9HE6PKN02YOG/Interstellar.jpg?format=1500w" alt="" />
-
-
-          <div className='shadow-2xl py-2 px-2 leading-7 col-span-2 bg-gray-900 text-white  w-[739px] h-auto overflow-auto'>
-
-            <h1 className='font-extrabold text-white px-9'>Interstellar</h1>
-            <p>Pg-13/2h 49min/ Adventure, Drama,Sci-fi,</p>
-            <br />
-            <div className='flex justify-between px-4 py-4'>
-              <h1 className=''>SUMMARY</h1>
-
-
-              <p className='text-right  text-red-900 space-x-2'>
-
-                <i class="fa-regular fa-face-smile px-3 "></i >124
-                <i class="fa-regular fa-face-smile px-3 "></i>4</p>
-            </div>
-
-            <p className=' py-4 px-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias cum obcaecati quidem atque, cupiditate minima ipsa sed quibusdam. Debitis ullam, possimus accusamus non similique maiores commodi magnam laboriosam id ab.</p>
-          </div>
-
-          <div className='shadow-2xl py-4 px-4 leading-1 col-span-2 bg-gray-900 text-white text-center w-[739px] h-auto '>
-            <p className=''>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, aperiam neque! Quidem quis sed molestias quisquam non ducimus in, dolorum neque recusandae ab accusamus ut! Officiis porro, explicabo alias omnis possimus quia? Soluta natus numquam porro vitae exercitationem ipsam iste atque tempora nostrum, ducimus commodi consectetur quasi nemo expedita
-              molestiae?</p>
-            <div className='flex justify-between '>
-
-              <button className='bg-black text-red-900 border-4 border-red-800 px-4'> Watch Trailer</button>
-              <h1 className=' space-x-5'>
-
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-twitter"></i>
 
 
 
-              </h1>
-
-            </div>
-
-
-
-          </div>
-
-
-        </div>
-
+      <div onClick={() => nav(`/detail/${meal.id}`, { state: meal })} className='shadow-brown-100 shadow-lg h-[300px] w-[300px] cursor-pointer'>
+        <h1>{meal.strMeal}</h1>
+        <img src={meal.strMealThumb} alt="" />
       </div>
-    </div>
 
+
+
+      <h1>Welcome Home</h1>
+
+
+
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae unde velit accusamus illo est dolore aut possimus ut aspernatur, excepturi rem dolorum enim ipsa assumenda eos suscipit eaque autem quidem magnam harum, neque sed ex molestias soluta! Perferendis, alias veniam, sunt vitae voluptatem ipsam culpa magni quasi magnam a, nemo exercitationem asperiores corrupti. Reiciendis quaerat optio modi molestiae temporibus iure sit dolorem nostrum praesentium commodi. Porro, quibusdam est accusantium quidem iure atque non molestiae iste hic praesentium sed ratione, velit beatae soluta delectus tempore eligendi! Magnam dolor quidem ullam, adipisci esse non minus placeat iste voluptate cupiditate fugiat facilis doloremque?</p>
+    </div>
   )
 }
-
-
-
-
-
-
-
-
-
-
 export default HomePage
